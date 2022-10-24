@@ -77,7 +77,9 @@
     window.CUSDIS.setTheme = {
       theme: 'dark'
     },
-    window.CUSDIS.initial()
+    window.onidchange = function (event) {
+      if (event.newURL.split('?')[0] !== event.oldURL.split('?')[0]) {
+        window.CUSDIS.initial()
   </script>
   <!-- cusdis核心库 -->
   <!-- <script src="https://cusdis.com/js/cusdis.docsify.js"></script>  -->
